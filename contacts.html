@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts</title>
+    <script type="text/javascript" src="js/sha256.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+	<link rel="stylesheet" href="/css/contactsStyle.css">
+	
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() 
+		{
+			readCookie();
+		}, false);
+		</script>
+  </head>
+  	<body>
+		<h1>Covid Contacts</h1>
+		<br><br>
+		<h3>
+		<p style="font-size:1em" >Contacts</p>
+		<p style="font-size:.7em" id = "username"></p>
+		</h3>
+		    <div class="box">
+
+		    </div>
+			<div class="box">
+				<form class="searchBox">
+					<div class="searchBar">
+						<input class="input" type="text" id="searchText" placeholder="Contacts to Search"/>
+						<button class="button" type="button" id="contactsSearchButton"  onclick="searchContacts();"><span> Search Contact </span></button>
+					    <br>
+					    <br>
+					    <span id="contactsResult"></span>
+					    <br>
+						<span class="searchResult" id="searchResult"></span>
+						<div class="resultBox">
+							<table class="searchTable" id="searchTable"></table>
+						</div>
+					</div>
+				</form>
+
+				<form class="addBox">
+					<div class="addContact">
+					<p><strong>Add Contact</strong></p>
+					<input type="text" class="textFields" id="firstName" name="firstName" placeholder="Enter a First Name">
+					<br>
+					<input type="text" class="textFields" id="lastName" name="lastName" placeholder="Enter a Last Name">
+					<br>
+					<input type="email" class="textFields" id="email" name="email" placeholder="Enter a Email">
+					<br>
+					<input type="text" class="textFields" id="phoneNumber" placeholder="Phone Number">
+					<br>
+					<span id="addContactResult"></span>
+					<br>
+					<button type="button" id="addContactButton" class="button" onclick="addContact();"><span> Add Contact </span></button><br/>
+					</div>
+					<a href="index.html" class="button"><span> Log Out </span></a>
+				</form>
+			</div>
+	</body>
+</html>
